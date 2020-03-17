@@ -7,7 +7,7 @@
 #define tam_buffer 100
 
 char pilha[tam_buffer];
-int n_pilha=0;
+int n_pilha = 0;
 
 void push(char c) {
  //Insere caractere c na pilha
@@ -23,10 +23,8 @@ char pop() {
   if (n_pilha>0) {
     n_pilha--;
     c = pilha[n_pilha];
-
-    return c;
   }
-
+  return c;
 }
 
 int main() {
@@ -39,9 +37,9 @@ int main() {
     if (!(buffer[i] == ' ' || buffer[i] == '\n' || buffer[i] == '\0')) push(buffer[i]);
 
     else{
-        for ( j = 0 ; j< (strlen(buffer)) ; j++) printf("%c", pop());
+        for ( j = 0 ; n_pilha>0 ; j++) printf("%c", pop());
 
-        if (i != strlen(buffer)-1) printf(" ");
+	       if (i != strlen(buffer)-1) printf(" ");
     }
   }
   printf("\n");
