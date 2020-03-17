@@ -39,7 +39,7 @@ int main() {
     else{
         for ( j = 0 ; n_pilha>0 ; j++) printf("%c", pop());
 
-	       if (i != strlen(buffer)-1) printf(" ");
+	if (i != strlen(buffer)-1) printf(" ");
     }
   }
   printf("\n");
